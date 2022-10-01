@@ -1,13 +1,12 @@
+import Header from "./header";
+import Footer from "./footer";
+
 export default function Layout({ children }) {
     return (
         <>
-            <header>
-                Header
-            </header>
+            <Header />
             <main>{children}</main>
-            <footer>
-                &copy; 2022 - Our portfolio
-            </footer>
+            <Footer />
         </>
     )
 }
