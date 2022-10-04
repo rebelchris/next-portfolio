@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import IntroHeader from "../components/introHeader";
 import RecentPosts from "../components/recentPosts";
+import FeaturedWork from "../components/featuredWork";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
         <IntroHeader />
         <RecentPosts />
+        <FeaturedWork />
     </div>
   )
 }
