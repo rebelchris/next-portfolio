@@ -6,7 +6,7 @@ export default function Header() {
     const routes = ['Blog', 'Work', 'Contact'];
 
     return (
-        <header className='container mx-auto flex justify-between h-24 items-center'>
+        <header className='container mx-auto flex justify-between h-24 items-center px-6 md:px-0'>
             <Link href='/'>
                 <svg aria-label="Daily Dev Tips logo" xmlns="http://www.w3.org/2000/svg" width="30" height="24">
                     <path d="M 13.073 23.977 L 10.214 23.147 C 9.914 23.063 9.746 22.748 9.83 22.448 L 16.228 0.406 C 16.312 0.106 16.626 -0.063 16.926 0.022 L 19.785 0.851 C 20.085 0.936 20.254 1.25 20.17 1.55 L 13.772 23.592 C 13.683 23.892 13.373 24.066 13.073 23.977 Z" fill="rgb(255,188,61)"></path>
