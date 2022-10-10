@@ -8,4 +8,9 @@ tags:
     - tag2
 ---
 
-# The main content
+This is the very first blog post
+
+## Yet another heading
+
+- This is cool
+- Indeed super cool
