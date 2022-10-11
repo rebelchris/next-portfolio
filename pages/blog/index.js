@@ -1,20 +1,9 @@
-import fs from 'fs';
 import Head from 'next/head'
 import Article from "../../components/article";
-import matter from "gray-matter";
+import {getAllPosts} from "../../lib/api";
 
 export async function getStaticProps() {
-    const files = fs.readdirSync('./posts');
-
-    const posts = files.map((fileName) => {
-        const slug = fileName.replace('.md', '');
-        const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
-        const { data: frontmatter } = matter(readFile);
-        return {
-            slug,
-            ...frontmatter,
-        };
-    });
+    const posts = getAllPosts();
 
     return {
         props: {
@@ -24,7 +13,6 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ posts }) {
-    console.log(posts);
     return (
         <div>
             <Head>
