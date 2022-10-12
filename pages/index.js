@@ -3,19 +3,21 @@ import IntroHeader from "../components/introHeader";
 import RecentPosts from "../components/recentPosts";
 import FeaturedWork from "../components/featuredWork";
 
-import {getAllPosts} from "../lib/api";
+import {getAllPosts, getAllWork} from "../lib/api";
 
 export async function getStaticProps() {
   const posts = getAllPosts();
+  const work = getAllWork();
 
   return {
     props: {
       posts,
+      work,
     },
   };
 }
 
-export default function Home({posts}) {
+export default function Home({posts, work}) {
   return (
     <div>
       <Head>
@@ -25,7 +27,7 @@ export default function Home({posts}) {
       </Head>
         <IntroHeader />
         <RecentPosts posts={posts} />
-        <FeaturedWork />
+          <FeaturedWork work={work} />
     </div>
   )
 }
