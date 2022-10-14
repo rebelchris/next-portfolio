@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function IntroHeader() {
     return (
         <header className='px-6 py-14'>
@@ -8,12 +10,11 @@ export default function IntroHeader() {
                     <a href='#' className='inline-block bg-red-400 text-white px-6 py-3 text-lg rounded'>Check my work</a>
                 </div>
                 <span className='m-5 inline-block before:w-full before:aspect-square before:block before:absolute before:-left-1.5 before:top-1.5 before:bg-red-400 relative before:block before:absolute before:bg-red-400 relative z-0 before:rounded-full'>
-                    <img
-                        src='profile.png'
-                        width='240'
-                        height='240'
-                        alt='Image of Chris'
-                        className='z-10 relative rounded-full'
+                    <Image src='/profile.png'
+                           width='240'
+                           height='240'
+                           alt='Image of Chris'
+                           className='z-10 relative rounded-full'
                     />
                 </span>
             </div>
